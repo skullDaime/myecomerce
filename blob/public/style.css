@@ -1,0 +1,33 @@
+.appimg{
+    width: 50;
+    animation: imgAppEnter 1s;
+    
+}
+body,html{
+    background-color: blue;
+}
+
+.text1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20pt;
+}
+
+li{
+    list-style-type: none;
+}
+
+@keyframes imgAppEnter {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+        transform: translateX(100px);
+    }
+    100%{
+        position: relative;
+        position-left: 0;
+        transform: translateX(0);
+    }
+    
+}
