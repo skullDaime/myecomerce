@@ -9,6 +9,7 @@ import {
 import styles from './style.js';
 
 function Categories(){
+  const navigation = useNavigation(); 
   let  [isRefreshing, setisRefreshing] = useState(false);
   let {data : data2, loading: loading2, error: error2} = useQuery(
     gql`
@@ -43,7 +44,7 @@ function Categories(){
     horizontal={true} style={styles.scrollView}>
       {data2.allCategories.map(category=>{
         return(
-          <TouchableOpacity key={category.id} style={{width:200, backgroundColor:"#CC3311", margin:5}}>
+          <TouchableOpacity key={category.id} style={{width:200, backgroundColor:"#CC3311", margin:5}} onPress={()=>navigation.navigate("FilterCategory", {search:1})}>
           <View key={category.id} >
             <Text style={styles.title001}>{category.name}</Text>
             <Image style={styles.categoryImage} source={{uri: category.img}}></Image>

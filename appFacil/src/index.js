@@ -6,6 +6,7 @@ import Filter from './Filter';
 import User from './User';
 import Product from './Product';
 import Map from './Map';
+import FilterCatgory from './filterCategory';
 /*import Product from './Product';
 import Filter from './Filter';
 import Address from './Address';
@@ -41,6 +42,7 @@ function App() {
           <Stack.Screen name={"User"} component={User}></Stack.Screen>
           <Stack.Screen name={"Product"} component={Product}></Stack.Screen>
           <Stack.Screen name={"Map"} component={Map}/>
+          <Stack.Screen name={"FilterCategory"} component={FilterCatgory}></Stack.Screen>
         </Stack.Navigator>
       </NavigationContainer>
       </ApolloProvider>
